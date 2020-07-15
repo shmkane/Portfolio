@@ -11,8 +11,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
 
     <!-- Custom styles for this template -->
     <link href="css/styles.css" rel="stylesheet">
@@ -32,10 +30,10 @@
                     <a class="nav-link" href="#">Overview <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#gs_carousel">GradeSnap!</a>
+                    <a class="nav-link" href="#gradesnap">GradeSnap!</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Phone2Words</a>
+                    <a class="nav-link" href="#Phone2Words">Phone2Words</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">ISS Live Tracker</a>
@@ -67,8 +65,6 @@
 </header>
 
 <main role="main">
-
-
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -78,18 +74,22 @@
 
         <!-- START THE FEATURETTES -->
 
-        <hr class="featurette-divider">
+        <hr id="gradesnap" class="featurette-divider">
 
         <div class="row featurette">
             <div class="col-md-7">
                 <h2 class="featurette-heading">Grade<span class="text-muted">Snap!</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                    euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                    tellus ac cursus commodo.</p>
+                <p class="lead">Grade Snap is an integrated learning system that bridges the gap between traditional
+                    learning media and emerging technologies.</p>
+                <p>Students can continue to use traditional learning materials such as paper worksheets and
+                    maniplulatives, while receiving digital feedback in real-time. </p>
+                <p>Teachers use intuitive technology tools to increase grading efficiency and receive actionable
+                    insights on student performance</p>
+                <p class="text-info">Node.JS, NPM, MariaDB, HTML, CSS</p>
 
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-success">GitHub</button>
-                    <button type="button" class="btn btn-primary">Live Demo</button>
+                <div class="btn-group" role="group" aria-label="gradesnap buttons">
+                    <a class="btn btn-primary text-light" href="http://stemc.csc.ncsu.edu:8866/gradesnap/" target="_blank">Live
+                        Demo</a>
                 </div>
             </div>
             <div class="col-md-5">
@@ -115,6 +115,7 @@
                             <div class="container">
                                 <div class="carousel-caption">
                                     <h1 class="text-light">Login Screen</h1>
+                                    <p>Teachers and students can sign in or sign up here</p>
                                 </div>
                             </div>
                             <img class="second-slide"
@@ -123,26 +124,88 @@
                         </div>
                         <div class="carousel-item">
                             <img class="third-slide"
-                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                 src="assets/gradesnap/teacher_portal.png"
                                  alt="Third slide">
                             <div class="container">
-                                <div class="carousel-caption text-right">
-                                    <h1>One more for good measure.</h1>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
-                                        porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-                                        elit.</p>
-                                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                                <div class="carousel-caption">
+                                    <h1 class="text-light">Teacher Portal</h1>
+                                    <p>Teachers can create, modify, and grade assignments</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <a class="left carousel-control carousel-control-prev" href="#gs_carousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <a class="left carousel-control carousel-control-prev" href="#gs_carousel" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="right carousel-control carousel-control-next" href="#gs_carousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <a class="right carousel-control carousel-control-next" href="#gs_carousel" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider" id="Phone2Words">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Phone<span
+                        class="text-muted">2Words</span></h2>
+                <p class="lead">Never forget another phone number with this useful conversion tool! Simply enter a
+                    10-digit phone number, and it will convert it into two easy to remember words.</p>
+                <p>Inspired from <a href="https://what3words.com/">What3Words</a>, phone2words stives to accomplish the
+                    same task, except with phone numbers.</p>
+                <p class="text-info">Firebase, HTML, CSS, JavaScript</p>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a class="btn btn-success text-light" href="https://github.com/cra1gg/phone2word/" target="_blank">GitHub</a>
+                    <a class="btn btn-primary text-light" href="http://phone2words.shmkane.com" target="_blank">Live
+                        Demo</a>
+                </div>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <div id="pw2_carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="first-slide"
+                                 src="assets/phone2words/main_page.png"
+                                 alt="First slide">
+                            <div class="container">
+                                <div class="carousel-caption text-center">
+                                    <h1 class="text-light">Main Menu</h1>
+                                    <p>Shows a brief example of a Phone2Words conversion</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1 class="text-light">Conversion</h1>
+                                    <p>An example phone number conversion to a word</p>
+                                </div>
+                            </div>
+                            <img class="second-slide"
+                                 src="assets/phone2words/converted.png"
+                                 alt="Second slide">
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control carousel-control-prev" href="#pw2_carousel" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control carousel-control-next" href="#pw2_carousel" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
@@ -153,27 +216,11 @@
         <hr class="featurette-divider">
 
         <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Oh yeah, it's that good. <span
-                        class="text-muted">See for yourself.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                    euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                    tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"
-                     alt="Generic placeholder image">
-            </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                    euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                    tellus ac cursus commodo.</p>
+                <h2 class="featurette-heading">International Space Station <span class="text-muted">Live Tracker</span></h2>
+                <p class="lead">Retrieves the The International Space Station's latitude and longitude in low Earth's orbit via <a href="http://api.open-notify.org/iss-now.json">ISS-NOW json API</a>.</p>
+                <p>Its coordinates are then plotted on a map and updated every second, drawing a line of it's path.</p>
+                <p>Furthermore, the tracker will let you know when the ISS is flying close to your location!</p>
             </div>
             <div class="col-md-5">
                 <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto"

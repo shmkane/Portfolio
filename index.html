@@ -33,6 +33,9 @@
                     <a class="nav-link" href="#">GradeSnap!</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#tagexaminer">Swarm TagExaminer</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#Phone2Words">Phone2Words</a>
                 </li>
                 <li class="nav-item">
@@ -42,16 +45,13 @@
                     <a class="nav-link" href="#sellstick">SellStick</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ROS TagExaminer</a>
+                    <a class="nav-link" href="#others">Steganography</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Steganography</a>
+                    <a class="nav-link" href="#others">Minecraft Server</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Minecraft Server</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Java Calculator</a>
+                    <a class="nav-link" href="#others">Java Calculator</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Dan Debunner</a>
@@ -151,10 +151,90 @@
             </div>
         </div>
 
-        <hr class="featurette-divider" id="Phone2Words">
+        <hr class="featurette-divider" id="tagexaminer">
 
         <div class="row featurette">
             <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">NASA Swarmathon <br><span class="text-muted">April Tag Examiner</span>
+                </h2>
+                <p class="lead">Detection of AprilTag and decision making code behind <a
+                        href="https://github.com/BCLab-UNM/SwarmBaseCode-ROS">Swarmathon</a> rovers drop-off
+                    state. </p>
+                <p>Based on the positioning and orientation of the tags, the swarm rover would decide what direction to
+                    turn in otder to ensure successful drop-off</p>
+
+                <p class="text-info">C++, ROS, Gazebo</p>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a class="btn btn-success text-light" href="https://github.com/shmkane/TagExaminer"
+                       target="_blank">GitHub</a>
+                    <a class="btn btn-primary text-light" href="https://github.com/BCLab-UNM/SwarmBaseCode-ROS"
+                       target="_blank">
+                        Swarmathon Repo</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="tag_carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="first-slide"
+                                 src="assets/swarm/map.png"
+                                 alt="First slide">
+                            <div class="container">
+                                <div class="carousel-caption text-center">
+                                    <h1 class="text-light">Simulation Interface</h1>
+                                    <p>Simulation of NASA Swarmathon rovers with cubes in "cluster"</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1 class="text-light">AprilTag Detection</h1>
+                                    <p>How rovers detect the AprilTags and extract positional infomration</p>
+                                </div>
+                            </div>
+                            <img class="second-slide"
+                                 src="assets/swarm/detection.png"
+                                 alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1 class="text-light">NavSat & ODOM</h1>
+                                    <p>Rovers set to autonomous mode monitoring navsat and odom</p>
+                                </div>
+                            </div>
+                            <img class="second-slide"
+                                 src="assets/swarm/sensors1.png"
+                                 alt="Second slide">
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control carousel-control-prev" href="#tag_carousel" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control carousel-control-next" href="#tag_carousel" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider" id="Phone2Words">
+
+        <div class="row featurette">
+                <div class="col-md-7">
                 <h2 class="featurette-heading">Phone<span
                         class="text-muted">2Words</span></h2>
                 <p class="lead">Never forget another phone number with this useful conversion tool! Simply enter a
@@ -217,7 +297,7 @@
         <hr class="featurette-divider" id="iss">
 
         <div class="row featurette">
-            <div class="col-md-7">
+            <div class="col-md-7 order-md-2">
                 <h2 class="featurette-heading">International Space Station <span class="text-muted">Live Tracker</span>
                 </h2>
                 <p class="lead">Retrieves the The International Space Station's latitude and longitude in low Earth's
@@ -265,40 +345,36 @@
             </div>
         </div>
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider" id="others">
 
         <!-- /END THE FEATURETTES -->
 
         <div class="row">
             <div class="col-lg-4">
                 <img class="rounded-circle"
-                     src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                     src="assets/others/stegan.png"
                      alt="Generic placeholder image" width="140" height="140">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                    vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
-                    cursus magna.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                <h2>Digital Steganography</h2>
+                <p>Embed and extract hidden messages within the pixels of photos.</p>
+                <p class="text-info">Developed in C</p>
+                <p><a class="btn btn-secondary text-light" role="button">Private Repository</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="rounded-circle"
-                     src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                     src="assets/others/acropolis.png"
                      alt="Generic placeholder image" width="140" height="140">
-                <h2>Heading</h2>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                    mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                    condimentum nibh.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                <h2>AcropolisMC</h2>
+                <p>Owner, administrator, and developer of Minecraft server reaching 50+ concurrent players, and
+                    profitting ~$3000 from cosmetic in-game purchases.</p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="rounded-circle"
-                     src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                     src="assets/others/bun.jpg"
                      alt="Generic placeholder image" width="140" height="140">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-                    porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                    ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                <h2>Debunner</h2>
+                <p>Removing of the bun located on my friend Dan's head. This one's mostly here as a joke</p>
+                <p><a class="btn btn-secondary" href="https://github.com/shmkane/Debunner/blob/master/Debunning.java"
+                      role="button">View Code &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 

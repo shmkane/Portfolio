@@ -33,13 +33,13 @@
                     <a class="nav-link" href="#">GradeSnap!</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#tagexaminer">Swarm TagExaminer</a>
+                    <a class="nav-link" href="#tagexaminer">Tag Examiner</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Phone2Words">Phone2Words</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#iss">ISS Live Tracker</a>
+                    <a class="nav-link" href="#iss">ISS Tracker</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#sellstick">SellStick</a>
@@ -48,17 +48,18 @@
                     <a class="nav-link" href="#others">Steganography</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#others">Minecraft Server</a>
+                    <a class="nav-link" href="#others">Server</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#others">Java Calculator</a>
+                    <a class="nav-link" href="#others">Dan Debunner</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Dan Debunner</a>
+                    <a class="nav-link disabled" href="#others" data-toggle="tooltip" data-toggle="tooltip" data-html="true" title="Currently Available">Java Calculator</a>
                 </li>
+
             </ul>
             <form class="form-inline mt-2 mt-md-0">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">GitHub</button>
+                <a href="https://github.com/shmkane/" class="btn btn-outline-success my-2 my-sm-0" type="submit">GitHub</a>
             </form>
         </div>
     </nav>
@@ -161,7 +162,7 @@
                         href="https://github.com/BCLab-UNM/SwarmBaseCode-ROS">Swarmathon</a> rovers drop-off
                     state. </p>
                 <p>Based on the positioning and orientation of the tags, the swarm rover would decide what direction to
-                    turn in otder to ensure successful drop-off</p>
+                    turn in order to ensure successful drop-off</p>
 
                 <p class="text-info">C++, ROS, Gazebo</p>
                 <div class="btn-group" role="group" aria-label="Basic example">
@@ -178,12 +179,24 @@
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
                         <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+
 
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="first-slide"
-                                 src="assets/swarm/map.png"
+                                 src="assets/swarm/winners.jpg"
+                                 alt="First slide">
+                            <div class="container">
+                                <div class="carousel-caption text-center">
+                                    <h1 class="text-light">Swarmathon</h1>
+                                    <p>1st place @ Kennedy Space Center 4/19/2018</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/swarm/map.png"
                                  alt="First slide">
                             <div class="container">
                                 <div class="carousel-caption text-center">
@@ -353,19 +366,22 @@
             <div class="col-lg-4">
                 <img class="rounded-circle"
                      src="assets/others/stegan.png"
-                     alt="Generic placeholder image" width="140" height="140">
+                     alt="Generic placeholder image" width="240" height="140">
                 <h2>Digital Steganography</h2>
                 <p>Embed and extract hidden messages within the pixels of photos.</p>
-                <p class="text-info">Developed in C</p>
-                <p><a class="btn btn-secondary text-light" role="button">Private Repository</a></p>
+                <p class="text-info">C</p>
+                <a class="btn btn-success" href="https://gist.github.com/shmkane/6a133511f00f33e3035493fe3cfa6861"
+                   target="_blank">View Code</a>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="rounded-circle"
                      src="assets/others/acropolis.png"
-                     alt="Generic placeholder image" width="140" height="140">
+                     alt="Generic placeholder image" width="240" height="140">
                 <h2>AcropolisMC</h2>
                 <p>Owner, administrator, and developer of Minecraft server reaching 50+ concurrent players, and
                     profitting ~$3000 from cosmetic in-game purchases.</p>
+                <p class="text-info">Java, Bash, FTP, Ubuntu Server</p>
+
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="rounded-circle"
@@ -373,8 +389,16 @@
                      alt="Generic placeholder image" width="140" height="140">
                 <h2>Debunner</h2>
                 <p>Removing of the bun located on my friend Dan's head. This one's mostly here as a joke</p>
-                <p><a class="btn btn-secondary" href="https://github.com/shmkane/Debunner/blob/master/Debunning.java"
-                      role="button">View Code &raquo;</a></p>
+                <p class="text-info">Java, Faith, Trust, Pixie Dust</p>
+
+
+                <div class="btn-group" role="group" aria-label="debunning buttons">
+                    <a class="btn btn-success" href="https://github.com/shmkane/Debunner/blob/master/Debunning.java"
+                       target="_blank">View Code</a>
+                    <a class="btn btn-primary text-light" href="assets/others/debunning.jpg"
+                       target="_blank">Live
+                        Demo</a>
+                </div>
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
@@ -384,7 +408,7 @@
     <!-- FOOTER -->
     <footer class="container">
         <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; Soham Kane&middot; Last Updated 7/15/21 <a href="https://github.com/shmkane/">GitHub</a></p>
     </footer>
 </main>
 

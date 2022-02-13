@@ -36,7 +36,7 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
     } else {
       setCurrentIndex(currentIndex + 1);
     }
-  }
+  };
 
   return (
     <div
@@ -51,43 +51,43 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
         textDecoration: `none`,
         borderRadius: `lg`,
         px: isHovered ? 3 : [3, 4, 5],
-        py: [4, 5],
         background: bg || `none`,
-        transition: `all 0.25s linear !important`,
+        transition: `all 0.2s linear !important`,
       }}
     >
       <div
         sx={{
-          textTransform: `uppercase`,
+          textTransform: !isHovered ? `uppercase` : `none`,
           letterSpacing: `wide`,
-          fontSize: isHovered ? [1, 2] : [4, 5],
-          py: isHovered ? [1, 2] : [4, 5],
-          px: isHovered ? 4 : 1,
+          fontSize: isHovered ? [2, 3] : [4, 5],
+          paddingTop: 5,
+          px: isHovered ? 4 : 0,
           fontWeight: `medium`,
           lineHeight: 1,
         }}
       >
         {title}
       </div>
-      {!isHovered && (
-        <div
-          sx={{
-            opacity: 0.85,
-            textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
-          }}
-        >
-          {children}
-        </div>
-      )}
-      {isHovered && (
-        <ImageCarousel
-          links={links}
-          onMouseEnter={onEnter}
-          currentIndex={currentIndex}
-          decrementIndex={decrementIndex}
-          incrementIndex={incrementIndex}
-        />
-      )}
+      <div sx={{paddingBottom: 5, mt: 3}}>
+        {isHovered ? (
+          <ImageCarousel
+            links={links}
+            onMouseEnter={onEnter}
+            currentIndex={currentIndex}
+            decrementIndex={decrementIndex}
+            incrementIndex={incrementIndex}
+          />
+        ) : (
+          <div
+            sx={{
+              opacity: 0.85,
+              textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
+            }}
+          >
+            {children}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

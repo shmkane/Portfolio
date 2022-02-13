@@ -17,7 +17,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-cara": "^3.0.0",
+    "@lekoarts/gatsby-theme-cara": "^3.0.4",
     "gatsby": "^4.4.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-gatsby-cloud": "^4.0.0",

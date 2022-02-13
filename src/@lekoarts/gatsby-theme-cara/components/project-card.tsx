@@ -11,16 +11,9 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
-  const [isHovered, setIsHovered] = React.useState(false);
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
-  const onEnter = () => {
-    setIsHovered(true);
-  };
-
-  const onLeave = () => {
-    setIsHovered(false);
-  };
+  const isInfoPage = currentIndex === 0;
 
   const decrementIndex = () => {
     if (currentIndex === 0) {
@@ -40,9 +33,9 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
 
   return (
     <div
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
-      onClick={incrementIndex}
+      onClick={() => {
+          incrementIndex();
+      }}
       sx={{
         width: `100%`,
         cursor: `pointer`,
@@ -50,18 +43,22 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
         position: `relative`,
         textDecoration: `none`,
         borderRadius: `lg`,
-        px: isHovered ? 3 : [3, 4, 5],
+        px: isInfoPage ? [3, 4, 5] : 3,
         background: bg || `none`,
         transition: `all 0.2s linear !important`,
+        "&:hover": {
+          boxShadow: `lg`,
+          transform: `translateY(-10px)`,
+        },
       }}
     >
       <div
         sx={{
-          textTransform: !isHovered ? `uppercase` : `none`,
+          textTransform: isInfoPage ? `uppercase` : `none`,
           letterSpacing: `wide`,
-          fontSize: isHovered ? [2, 3] : [4, 5],
+          fontSize: isInfoPage ? [4, 5] : [2, 3],
           paddingTop: 5,
-          px: isHovered ? 4 : 0,
+          px: isInfoPage ? 0 : 4,
           fontWeight: `medium`,
           lineHeight: 1,
         }}
@@ -69,11 +66,10 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
         {title}
       </div>
       <div sx={{paddingBottom: 5, mt: 3}}>
-        {isHovered ? (
+        {currentIndex !== 0 ? (
           <ImageCarousel
             links={links}
-            onMouseEnter={onEnter}
-            currentIndex={currentIndex}
+            currentIndex={currentIndex - 1}
             decrementIndex={decrementIndex}
             incrementIndex={incrementIndex}
           />

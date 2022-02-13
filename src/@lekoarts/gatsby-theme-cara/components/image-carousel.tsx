@@ -5,14 +5,13 @@ import { useStaticQuery, graphql } from "gatsby";
 
 interface ImageCarouselProps {
   links: string[];
-  onMouseEnter: () => void;
   currentIndex: number;
   incrementIndex: () => void;
   decrementIndex: () => void;
 }
 
 
-const ImageCarousel = ({ links, currentIndex, onMouseEnter, incrementIndex, decrementIndex }: ImageCarouselProps) => {
+const ImageCarousel = ({ links, currentIndex, incrementIndex, decrementIndex }: ImageCarouselProps) => {
   // Given a list of links to images, have a carousel of images
   // that can be scrolled through.
   //
@@ -105,6 +104,7 @@ const ImageCarousel = ({ links, currentIndex, onMouseEnter, incrementIndex, decr
         justifyContent: "center",
         textAlign: "center",
       }}
+
     >
       {leftArrow}
       <div
@@ -115,7 +115,6 @@ const ImageCarousel = ({ links, currentIndex, onMouseEnter, incrementIndex, decr
         <GatsbyImage
           alt={"Loading..."}
           image={image}
-          onMouseEnter={onMouseEnter}
         />
       </div>
       {/* Create a centered right arrow */}

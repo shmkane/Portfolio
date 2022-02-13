@@ -24,7 +24,7 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
   };
 
   const incrementIndex = () => {
-    if (currentIndex === links.length - 1) {
+    if (currentIndex === links.length) {
       setCurrentIndex(0);
     } else {
       setCurrentIndex(currentIndex + 1);
@@ -34,7 +34,9 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
   return (
     <div
       onClick={() => {
+        if (isInfoPage) {
           incrementIndex();
+        }
       }}
       sx={{
         width: `100%`,
@@ -57,7 +59,7 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
           textTransform: isInfoPage ? `uppercase` : `none`,
           letterSpacing: `wide`,
           fontSize: isInfoPage ? [4, 5] : [2, 3],
-          paddingTop: 5,
+          mt: 5,
           px: isInfoPage ? 0 : 4,
           fontWeight: `medium`,
           lineHeight: 1,
@@ -65,7 +67,7 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
       >
         {title}
       </div>
-      <div sx={{paddingBottom: 5, mt: 3}}>
+      <div sx={{ paddingBottom: 5, mt: 3 }}>
         {currentIndex !== 0 ? (
           <ImageCarousel
             links={links}
@@ -76,7 +78,6 @@ const ProjectCard = ({ links, title, children, bg }: ProjectCardProps) => {
         ) : (
           <div
             sx={{
-              opacity: 0.85,
               textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
             }}
           >

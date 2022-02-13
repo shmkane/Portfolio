@@ -10,15 +10,17 @@ interface ImageCarouselProps {
   decrementIndex: () => void;
 }
 
-
-const ImageCarousel = ({ links, currentIndex, incrementIndex, decrementIndex }: ImageCarouselProps) => {
+const ImageCarousel = ({
+  links,
+  currentIndex,
+  incrementIndex,
+  decrementIndex,
+}: ImageCarouselProps) => {
   // Given a list of links to images, have a carousel of images
   // that can be scrolled through.
   //
-  // The images are rendered as StaticImages, which are a Gatsby
-  // component that can be used to render images.
+  // The images are rendered as GatsbyImage
 
-  // If there's more than one image, render a carousel.
   const data = useStaticQuery(graphql`
     query {
       images: allFile {
@@ -45,7 +47,18 @@ const ImageCarousel = ({ links, currentIndex, incrementIndex, decrementIndex }: 
     <div
       style={{
         flex: 1,
+        display: `flex`,
+        alignItems: `center`,
+        justifyContent: `center`,
       }}
+      sx={{
+        "&:hover": {
+          background: `rgba(0, 0, 0, 0.5)`,
+          borderRadius: `50px 0px 0px 50px`,
+          transition: `all 0.3s linear !important`,
+        },
+      }}
+      onClick={decrementIndex}
     >
       <div
         sx={{
@@ -53,7 +66,6 @@ const ImageCarousel = ({ links, currentIndex, incrementIndex, decrementIndex }: 
           opacity: currentIndex === 0 ? 0.3 : 1,
           transition: `all 0.25s linear !important`,
         }}
-        onClick={decrementIndex}
       >
         <svg
           sx={{
@@ -72,7 +84,18 @@ const ImageCarousel = ({ links, currentIndex, incrementIndex, decrementIndex }: 
     <div
       style={{
         flex: 1,
+        display: `flex`,
+        alignItems: `center`,
+        justifyContent: `center`,
       }}
+      sx={{
+        "&:hover": {
+          background: `rgba(0, 0, 0, 0.5)`,
+          borderRadius: `0px 50px 50px 0px`,
+          transition: `all 0.3s linear !important`,
+        },
+      }}
+      onClick={incrementIndex}
     >
       <div
         sx={{
@@ -80,7 +103,6 @@ const ImageCarousel = ({ links, currentIndex, incrementIndex, decrementIndex }: 
           opacity: currentIndex === links.length - 1 ? 0.3 : 1,
           transition: `all 0.25s linear !important`,
         }}
-        onClick={incrementIndex}
       >
         <svg
           sx={{
@@ -100,11 +122,7 @@ const ImageCarousel = ({ links, currentIndex, incrementIndex, decrementIndex }: 
       style={{
         display: "flex",
         flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
       }}
-
     >
       {leftArrow}
       <div
@@ -115,6 +133,8 @@ const ImageCarousel = ({ links, currentIndex, incrementIndex, decrementIndex }: 
         <GatsbyImage
           alt={"Loading..."}
           image={image}
+          onClick={incrementIndex}
+          objectFit="scale-down"
         />
       </div>
       {/* Create a centered right arrow */}
